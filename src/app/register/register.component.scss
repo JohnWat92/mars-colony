@@ -1,0 +1,31 @@
+.multipageStyling{
+    background:black;
+}
+.registerBody{
+    display:flex;
+    flex-direction:column;
+
+    padding-left:1rem;
+    background:black;
+    height:100%;
+    color:white;
+    h1{
+    text-align:center;
+    }
+    #selector{
+        color:red;
+        margin-top:1rem;
+    }
+    fieldset{
+        border:0;
+    }
+    input{
+            width: 98%;
+    background: transparent;
+    border: 0px;
+    font-size:1rem;
+    color:white;
+    margin-top:1rem;
+    border-bottom: solid white 1px;
+    }
+}
