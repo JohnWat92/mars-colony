@@ -1,6 +1,6 @@
 export interface Job{
     name:string;
-    id:number;
+    id:string;
     description:string;
 }
 export class NewColonist{

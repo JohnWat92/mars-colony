@@ -1,30 +1,24 @@
 <div class = "registerBody">
   <h1>Register</h1>
-  <form action="test.php" method="post">
+  <form>
     <fieldset>
-      <p>
-        <label>
-          <input type="text" name="name" placeholder="Name"/>
-        </label>
-      </p>
-      <p>
-        <label>
-          <input type="number" name="age" placeholder="Age" />
-        </label>
-      </p>
-      <form class= "selection">
-          
-            <select id = "selector">
-              <option value="sections"selected>Select Occupation</option> 
-              <option value="home">Alien Hunter</option>
-              <option value="science">Yoga Teacher</option>
-              <option value="business">Dust Farmer</option>
-              <option value="sports">Front-End Developer</option>
-              
+        <input type="text" placeholder="Name" required>
+        <input type="number" placeholder="Age" required>
+        <div class="custom-select">
+            <select required>
+                <option value="(none)">Select an Occupation</option>
+                <!--marsJobs-->
+                <option value = "{{marsJob[0].name}}">{{marsJob[0].name}}</option>
+                <option value = "{{marsJob[1].name}}">{{marsJob[1].name}}</option>
+                <option value = "{{marsJob[2].name}}">{{marsJob[2].name}}</option>
+                <option value = "{{marsJob[3].name}}">{{marsJob[3].name}}</option>
+                
             </select>
-        </form>
-      
+        </div>
     </fieldset>
-  </form>
+    <fieldset>
+            <button type="submit">Submit</button>
+    </fieldset>
+</form>
   <h1><a href = "/encounters"class = "check-in"> Check-in </a></h1>
 </div>
