@@ -16,6 +16,29 @@ height:100%;
     }
     display: flex;
     flex-flow:column wrap;
+    align-items: center;
     justify-content:space-around;
     
+}
+.pulse {
+    width: 75px;
+    height: 75px;
+    background: rgba(237,237,237,.2);
+    opacity: .2;
+    border-radius: 50%;
+    animation: border-pulse 2s infinite;
+}
+@keyframes border-pulse{
+    0% {
+        box-shadow: 0 0 0 1rem rgba(255,255,255,.1), 0 0 0 2rem rgba(255,255,255,.15), 0 0 0 3rem rgba(255,255,255,.2);
+    }
+    50% {
+        box-shadow: 0 0 0 1.25rem rgba(255,255,255,.1), 0 0 0 2.75rem rgba(255,255,255,.1), 0 0 0 4rem rgba(255,255,255,0);
+    }
+    75% {
+        box-shadow: 0 0 0 1.5rem rgba(255,255,255,.1), 0 0 0 3rem rgba(255,255,255,0), 0 0 0 5rem rgba(255,255,255,0);
+    }
+    100% {
+        box-shadow: 0 0 0 1.75rem rgba(255,255,255,0), 0 0 0 3.75rem rgba(255,255,255,0), 0 0 0 6rem rgba(255,255,255,0);
+    }
 }
