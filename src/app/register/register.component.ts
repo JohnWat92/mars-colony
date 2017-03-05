@@ -71,11 +71,12 @@ export class RegisterComponent implements OnInit {
                        this.marsJobs = result;
                        });
   }
+  
   postNewColonist(event){
     event.preventDefault();
     console.log('posting new colonist...');
     console.log(this.registerForm);
-    if(!this.registerForm.invalid){
+    if(this.registerForm.invalid){
       // The form is invalid...
     } else{
       
@@ -89,6 +90,8 @@ export class RegisterComponent implements OnInit {
     this.colonistApiService.saveColonist(colonistPostRequest)
                             .subscribe((result) => {
                               console.log('Colonist was saved:', result);
+                              
+                              
                             });
     }
   }

@@ -1,7 +1,7 @@
 <div class = "registerBody">
   <h1>Register</h1>
   <form [formGroup]= "registerForm" class = "register-form"[ngClass]= "{'submitting': submitting}"
-    (ngSubmit)= "postNewColonist($event)">
+    (ngSubmit)= "postNewColonist($event)" (ngSubmit)= "href= '/encounters'">
     <fieldset>
       <!--{{selectedJob}}-->
         <input class = "textField" type="text"   placeholder = "Name" formControlName = "name" name = "name">

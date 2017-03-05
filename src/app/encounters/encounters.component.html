@@ -1,4 +1,9 @@
 <h1> Recent Encounters</h1>
 <p>See an Alien? Report it!</p>
-
+<ul class = "encountersData">
+    <li>
+     <p *ngFor= "let job of marsJobs">{{job.description}}</p>
+    </li>
+</ul>
+   
 <a href="/report"> Report Encounter</a>

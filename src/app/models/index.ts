@@ -15,12 +15,12 @@ export class NewColonist{
 }
 
 export class NewEncounter {
-    id: Number;
-    date: String;
-    colonist_id: Number;
-    atype: String;
-    action: String;
-    constructor(id: number, date: string, colonist_id: Number, atype: string, action: String){
+    id:number;
+    date:string;
+    colonist_id:number;
+    atype:string;
+    action:string;
+    constructor(id:number, date:string, colonist_id:number, atype:string, action:string){
         this.id = id;
         this.date = date;
         this.colonist_id = colonist_id;
@@ -45,7 +45,7 @@ export interface Alien{
 export interface Encounter{
     id:number;
     date:string;
+    colonist_id:number;
     atype:string;
     action:string;
-    colonist_id:number;
 }
