@@ -5,11 +5,6 @@ import { Component } from '@angular/core';
  template: `
 
   <div class ="multipageStyling">
-      <a routerLink="">Home Page </a>
-      <a routerLink="/register">Register Page </a>
-      <a routerLink="/encounters">Encounters Page </a>
-      <a routerLink="/report">Report Page </a>
-      <a routerLink="/notfound">Not Found Page </a>
     <router-outlet></router-outlet>
   </div>
   `,

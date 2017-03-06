@@ -1,0 +1,58 @@
+.reportBody{
+    color:white;
+    background:black;
+    font-family: 'Roboto', sans-serif;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    .topOfPage{
+        text-align:center;
+        padding:2rem;
+        h1{
+            font-size:2rem;
+        }
+    }
+    form{
+        display:flex;
+        flex-direction:column;
+        height:100%;
+        fieldset{
+            flex:1;
+        }
+    }
+    textarea::placeholder {
+        color: #ed4343;
+        font-size:1rem;
+    }
+    select{
+        width:95%;
+        margin-bottom: 1rem;
+        background: black;
+        font-size: 1rem;
+        border: 0px;
+        height:2rem;
+        -webkit-appearance: none;
+        border-radius:0px;
+        border-bottom: solid 1px white;
+        color:#ed4343;
+    }
+    textarea{
+        width:95%;
+        font-size:1rem;
+    }
+    button{
+        justify-content: center;
+        align-items: center;
+        background: black;
+        color: white;
+        &:hover{
+            color:#ed4343;
+        }
+        font-family: 'Roboto', sans-serif;
+        padding:2rem;
+        font-size:2rem;
+        border: 0;
+    }
+     
+}

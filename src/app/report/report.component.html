@@ -1,18 +1,22 @@
-<h1>Report Encounter</h1>
-<p>Safety on Mars is your responsibility</p>
-<form [formGroup]= "reportForm" class = "report-form" [ngClass]= "{'submitting': submitting}" (ngSubmit)= "postNewEncounter($event)">
-    <fieldset>
-      <!--{{selectedJob}}-->
-        <div class="custom-select">
-            <!--<select required [(ngModel)]="selectedJob" name ="select">-->
-            <select formControlName = "atype" name = "atype" >
-                <option value= "">Select Alien Type</option>
-                <option *ngFor= "let alien of alienType" value="{{alien.type}}">{{alien.type}}</option>
-            </select>
-        </div>
-        <textarea formControlName = "action" name= "action" rows="10" cols="80">Action Taken</textarea>
-    </fieldset>
-    <fieldset>
-            <button ng-href = "/encounters" type="submit" >Submit</button>
-    </fieldset>
-</form>
+<div class = "reportBody">
+    <div class = "topOfPage">
+        <h1>Report Encounter</h1>
+        <p>Safety on Mars is your responsibility</p>
+    </div>
+    <form [formGroup]= "reportForm" class = "report-form" (ngSubmit)= "postNewEncounter($event)">
+        <fieldset>
+        <!--{{selectedJob}}-->
+            <div class="custom-select">
+                <!--<select required [(ngModel)]="selectedJob" name ="select">-->
+                <select formControlName = "atype" name = "atype" >
+                    <option value= "">Select alien type</option>
+                    <option *ngFor= "let alien of alienType" value="{{alien.type}}">{{alien.type}}</option>
+                </select>
+            </div>
+            <textarea formControlName = "action" placeholder = "Action taken" name= "action" rows="10" cols="80">Action Taken</textarea>
+        </fieldset>
+        <fieldset>
+                <button type="submit" >Submit Report</button>
+        </fieldset>
+    </form>
+</div>

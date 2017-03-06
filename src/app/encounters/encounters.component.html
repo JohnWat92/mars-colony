@@ -1,9 +1,15 @@
-<h1> Recent Encounters</h1>
-<p>See an Alien? Report it!</p>
-<ul class = "encountersData">
-    <li>
-     <p *ngFor= "let job of marsJobs">{{job.description}}</p>
-    </li>
-</ul>
-   
-<a href="/report"> Report Encounter</a>
+<div class = "encountersBody">
+    <div class = "topOfPage">
+        <h1> Recent Encounters</h1>
+        <p>See an Alien? Report it!</p>
+    </div>
+
+    <ul class = "encountersList">
+        <li *ngFor= "let encounters of Encounters">
+            <p>{{encounters.date}} - {{encounters.atype}}<br>{{encounters.action}}</p>
+        </li>
+    </ul>
+    <div class = "bottomOfPage">
+        <a href="/report"> Report Encounter</a>
+    </div>
+</div>

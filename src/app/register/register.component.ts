@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { NewColonist, Job } from '../models';
 import {
@@ -31,7 +32,8 @@ export class RegisterComponent implements OnInit {
  
   constructor(
     private colonistApiService: ColonistAPIService,
-    private jobsApiService: JobsAPIService
+    private jobsApiService: JobsAPIService,
+    private router:Router
     ) { 
 
     this.getMarsJobs();
@@ -90,7 +92,7 @@ export class RegisterComponent implements OnInit {
     this.colonistApiService.saveColonist(colonistPostRequest)
                             .subscribe((result) => {
                               console.log('Colonist was saved:', result);
-                              
+                              this.router.navigate(['encounters']);
                               
                             });
     }

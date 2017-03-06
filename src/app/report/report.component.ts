@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { NewEncounter, Alien, Colonist } from '../models';
 import {
@@ -30,7 +31,8 @@ export class ReportComponent implements OnInit {
 
   constructor( 
     private aliensApiService: AliensAPIService, 
-    private encountersApiService: EncountersAPIService
+    private encountersApiService: EncountersAPIService,
+    private router:Router
   ) { 
 
     this.getAlien();
@@ -69,10 +71,11 @@ export class ReportComponent implements OnInit {
     
       const newEncounter: NewEncounter = new NewEncounter(id, date, colonist_id, atype, action);
       const encounterPostRequest = {encounter: newEncounter};
-      console.log('RIGHT BEFORE SAVING');
+      
       this.encountersApiService.saveNewEncounter(encounterPostRequest)
                                 .subscribe((result) => {
                                 console.log('Encounters was saved:', result);
+                                this.router.navigate(['encounters']);
                                 
                               });
       }

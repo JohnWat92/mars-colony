@@ -1,0 +1,46 @@
+.encountersBody{
+    font-family: 'Roboto', sans-serif;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    .topOfPage{
+        background:white;
+        display:block;
+        color:black;
+        // position:fixed;
+        text-align:center;
+        h1{
+            font-size:2rem;
+            text-align:center;
+        }
+        padding:2rem;
+    }
+    ul{
+        overflow:scroll;
+        flex:1;
+        padding-left:1rem;
+        p{
+            margin:1rem;
+
+        }
+    }
+    .bottomOfPage{
+        padding:2rem;
+        display:flex;
+        justify-content: center;
+        flex:.5;
+        align-items: center;
+        background:black;
+        color:white;
+        font-size:2rem;
+        text-align:center;
+        a{
+            text-decoration: none;
+            color:white;
+            &:hover{
+            color:#ed4343;
+        }
+        }
+    }
+}
