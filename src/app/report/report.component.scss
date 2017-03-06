@@ -55,11 +55,11 @@
         font-size:$headerFont;
         border: 0;
     }
-    .submitting{
-        textarea{
+    form.submitting.ng-invalid{
+        textarea.ng-invalid{
             animation: invalid-pulse .5s infinite;
         }
-        select{
+        select.ng-invalid{
             animation: invalid-pulse .5s infinite;
         }
     }

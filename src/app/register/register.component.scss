@@ -70,11 +70,11 @@
         font-size:$headerFont;
         background:black;
     }
-    .submitting{
-        input{
+    form.submitting.ng-invalid{
+        input.ng-invalid{
             animation: invalid-pulse .5s infinite;
         }
-        select{
+        select.ng-invalid{
             animation: invalid-pulse .5s infinite;
         }
     }

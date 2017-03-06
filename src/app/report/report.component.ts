@@ -63,12 +63,13 @@ export class ReportComponent implements OnInit {
       if(this.reportForm.invalid){
         // The form is invalid...
       } else{
+      //need random number until ids are called 
       const id:number = 150; 
       const date:string = new Date().toISOString().substring(0, 10);
       const colonist_id:number = 117;
       const atype:string = this.reportForm.get('atype').value;
       const action:string = this.reportForm.get('action').value;
-      //need random number until ids are called 
+      
     
       const newEncounter: NewEncounter = new NewEncounter(id, date, colonist_id, atype, action);
       const encounterPostRequest = {encounter: newEncounter};
@@ -77,7 +78,6 @@ export class ReportComponent implements OnInit {
                                 .subscribe((result) => {
                                 console.log('Encounters was saved:', result);
                                 this.router.navigate(['encounters']);
-                                
                               });
       }
   }
