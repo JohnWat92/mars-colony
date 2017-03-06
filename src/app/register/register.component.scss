@@ -69,10 +69,14 @@
         font-size:2rem;
         background:black;
     }
- 
-    .ng-invalid .ng-dirty{
-        animation: invalid-pulse .5s infinite;
-    }   
+    .submitting{
+        input{
+            animation: invalid-pulse .5s infinite;
+        }
+        select{
+            animation: invalid-pulse .5s infinite;
+        }
+    }
     @keyframes invalid-pulse{
         0% {
         box-shadow: 0 0 0 0rem rgba(255,0,0,.8);

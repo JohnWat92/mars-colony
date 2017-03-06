@@ -76,6 +76,7 @@ export class RegisterComponent implements OnInit {
   
   postNewColonist(event){
     event.preventDefault();
+    this.clickedButton = true;
     console.log('posting new colonist...');
     console.log(this.registerForm);
     if(this.registerForm.invalid){

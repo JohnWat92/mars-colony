@@ -3,7 +3,7 @@
         <h1>Report Encounter</h1>
         <p>Safety on Mars is your responsibility</p>
     </div>
-    <form [formGroup]= "reportForm" class = "report-form" (ngSubmit)= "postNewEncounter($event)">
+    <form [formGroup]= "reportForm" class = "report-form" (ngSubmit)= "postNewEncounter($event)" [ngClass]= "{'submitting': clickedButton}">
         <fieldset>
         <!--{{selectedJob}}-->
             <div class="custom-select">

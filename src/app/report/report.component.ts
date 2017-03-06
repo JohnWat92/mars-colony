@@ -57,6 +57,7 @@ export class ReportComponent implements OnInit {
 
     postNewEncounter(event){
       event.preventDefault();
+      this.clickedButton = true;
       console.log('posting new encounter');
     
       if(this.reportForm.invalid){
