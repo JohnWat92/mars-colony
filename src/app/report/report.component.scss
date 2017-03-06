@@ -1,7 +1,8 @@
+@import "../../theme";
 .reportBody{
     color:white;
     background:black;
-    font-family: 'Roboto', sans-serif;
+    font-family: $themeFont;
     text-align:center;
     display:flex;
     flex-direction:column;
@@ -10,7 +11,7 @@
         text-align:center;
         padding:2rem;
         h1{
-            font-size:2rem;
+            font-size:$headerFont;
         }
     }
     form{
@@ -49,9 +50,9 @@
         &:hover{
             color:#ed4343;
         }
-        font-family: 'Roboto', sans-serif;
+        font-family: $themeFont;
         padding:2rem;
-        font-size:2rem;
+        font-size:$headerFont;
         border: 0;
     }
     .submitting{

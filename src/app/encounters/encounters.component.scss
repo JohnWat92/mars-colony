@@ -1,5 +1,6 @@
+@import "../../theme";
 .encountersBody{
-    font-family: 'Roboto', sans-serif;
+    font-family: $themeFont;
     position:relative;
     display:flex;
     flex-direction:column;
@@ -11,7 +12,7 @@
         // position:fixed;
         text-align:center;
         h1{
-            font-size:2rem;
+            font-size:$headerFont;
             text-align:center;
         }
         padding:2rem;
@@ -33,13 +34,13 @@
         align-items: center;
         background:black;
         color:white;
-        font-size:2rem;
+        font-size:$headerFont;
         text-align:center;
         a{
             text-decoration: none;
             color:white;
             &:hover{
-            color:#ed4343;
+            color:$themeFontColor;
         }
         }
     }

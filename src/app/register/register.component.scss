@@ -1,3 +1,4 @@
+@import "../../theme";
 .multipageStyling{
     background:black;
 }
@@ -8,20 +9,20 @@
     background:black;
     height:100%;
     color:white;
-    font-family: 'Roboto', sans-serif;
+    font-family: $themeFont;
     h1{
-        font-size:2rem;
+        font-size:$headerFont;
         padding:2rem;
         text-align:center;
     }
     #selector{
-        color:#ed4343;
+        color:$themeFontColor;
         margin-top:1rem;
     }
     select{
         font-size: 1rem;
         width: 99%;
-        color:#ed4343;
+        color:$themeFontColor;
         background:black;
         height:2rem;
         border:0;
@@ -43,7 +44,7 @@
         height:100%;
     }
     input::placeholder {
-        color: #ed4343;
+        color: $themeFontColor;
 }
     input{
         width: 98%;
@@ -59,14 +60,14 @@
     button{
         align-items:center;
         text-align: center;
-        font-family: 'Roboto', sans-serif;
+        font-family: $themeFont;
         padding:2rem;
         &:hover{
-            color:#ed4343;
+            color:$themeFontColor;
         }
         color:white;
         border:0;
-        font-size:2rem;
+        font-size:$headerFont;
         background:black;
     }
     .submitting{
