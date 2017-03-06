@@ -5,7 +5,7 @@
     flex-direction:column;
     justify-content: center;
     align-items: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: $themeFont;
     line-height: 1.5;
     .notFoundContent{
     width:570px;
@@ -16,7 +16,7 @@
         padding:.2rem;
     }
     h1{
-        font-size: 2rem;
+        font-size: $headerFont;
         font-weight: bold;
         padding-bottom: 1rem;
         padding-top:1rem;
