@@ -49,7 +49,7 @@ export class RegisterComponent implements OnInit {
   acceptAge(min:number, max:number){
     return (control: AbstractControl): {[key: string]: any} => {
       if (control.value < min || control.value > max) {
-        return {'Sorry Good Luck!': { age:control.value }};
+        return {'tooOld': { message: `You're ${control.value}, that's too old...` }};
       }  
       // else{
       //   return {'Welcome to Mars':{ age:control.value }};

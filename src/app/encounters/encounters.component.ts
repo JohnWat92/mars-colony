@@ -24,16 +24,16 @@ export class EncountersComponent implements OnInit {
   clickedButton:boolean;  
  
   constructor( private encountersApiService: EncountersAPIService){ 
-    this.getEncounter();
+    this.getEncounters();
     this.clickedButton = false;
   }
 
   ngOnInit() {
 
   }
-  getEncounter(){
+  getEncounters(){
     console.log('Getting NewEncounters...');
-    this.encountersApiService.getEncounter()
+    this.encountersApiService.getEncounters()
                        .subscribe((result) => {
                        this.Encounters = result;
                        });

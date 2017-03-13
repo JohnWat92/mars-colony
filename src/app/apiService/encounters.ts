@@ -15,7 +15,7 @@ interface EncounterPostRequest{
 export class EncountersAPIService{
     constructor( private http: Http){}
 
-    getEncounter(): Observable<Encounter[]>{
+    getEncounters(): Observable<Encounter[]>{
         return this.http.get(ENCOUNTERS_URL)
                         .map((res:Response) => res.json().encounters);
     }
@@ -25,7 +25,7 @@ export class EncountersAPIService{
         headers.append('Content-Type', 'application/json');
 
         return this.http.post(ENCOUNTERS_URL,newEncounter, { headers })
-                        .map((res: Response) => res.json().encounters);
+                        .map((res: Response) => res.json().encounter);
     }
 
 }
